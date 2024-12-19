@@ -1,0 +1,268 @@
+.app-container {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a8d8ea, #fef9ef); 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover; 
+    background-attachment: fixed; 
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px; 
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: center;
+    border: 1px solid #ddd; 
+    background-color: #ffffff; 
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background-color: #e8f5e9; 
+}
+
+.card img {
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 15px;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold; 
+    color: #444;
+    text-transform: capitalize; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .timer-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 20px;
+  }
+  
+  .timer-controls {
+    margin-top: 20px;
+  }
+  
+  .timer-controls button, .audio-controls button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .timer-controls button:hover, .audio-controls button:hover {
+    background-color: #45a049;
+  }
+  .audio-player {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .play-pause-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .play-pause-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .audio-progress {
+    width: 100%;
+    background: #e0e0e0;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .progress-bar {
+    background: #007bff;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  .meditation-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .meditation-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .meditation-steps {
+    margin-top: 20px;
+  }
+  
+  .meditation-steps h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .meditation-step {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .meditation-step:hover {
+    background-color: #ecf0f1;
+  }
+  
+  .meditation-step i {
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .meditation-step h4 {
+    font-size: 1.2em;
+    color: #2980b9;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .meditation-step p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .meditation-step:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+.yoga-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yoga-step i {
+  font-size: 40px;
+  color: #4CAF50; 
+  margin-bottom: 10px;
+}
+
+.yoga-step h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.yoga-step p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.yoga-step img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.yoga-step:nth-child(odd) {
+  background-color: #e7f7e7; 
+}
+
+.yoga-step:nth-child(even) {
+  background-color: #f0f4f4; 
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+app-relaxing-sounds {
+  background: transparent !important;
+  box-shadow: none;
+  border: none;
+}
+
+  
+  
+  
+  

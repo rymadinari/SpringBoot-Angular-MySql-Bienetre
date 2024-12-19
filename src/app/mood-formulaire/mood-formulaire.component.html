@@ -1,0 +1,79 @@
+<div class="form-container">
+  <form [formGroup]="moodForm" (ngSubmit)="onSubmit()" class="mood-form fadeIn">
+    <h2>Formulaire de l'humeur</h2>
+
+    <div class="form-group">
+      <label for="date">📅 Date</label>
+      <input type="date" id="date" formControlName="date" />
+    </div>
+
+    <div class="form-group">
+      <label for="mood">😊 Humeur</label>
+      <select id="mood" formControlName="mood">
+        <option value="">Choisir une humeur</option>
+        <option value="Très Heureux">😄 Très Heureux</option>
+        <option value="Heureux">😊 Heureux</option>
+        <option value="Neutre">😐 Neutre</option>
+        <option value="Triste">😢 Triste</option>
+        <option value="Très Triste">😭 Très Triste</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="emotionalReactions">💡 Réactions émotionnelles</label>
+      <input type="number" id="emotionalReactions" formControlName="emotionalReactions" placeholder="Fréquence des réactions émotionnelles" />
+    </div>
+
+    <div class="form-group">
+      <label for="stressLevel">⚡ Stress perçu</label>
+      <input type="number" id="stressLevel" formControlName="stressLevel" min="0" max="40" placeholder="Niveau de stress" />
+    </div>
+
+    <div class="form-group">
+      <label for="socialInteractions">👥 Interactions sociales cette semaine</label>
+      <input type="number" id="socialInteractions" formControlName="socialInteractions" placeholder="Nombre d'interactions sociales" />
+    </div>
+
+    <div class="form-group">
+      <label for="foodBalance">🍎 Équilibre alimentaire</label>
+      <select id="foodBalance" formControlName="foodBalance">
+        <option value="">Choisir</option>
+        <option value="Bien équilibré">Bien équilibré</option>
+        <option value="Moyennement équilibré">Moyennement équilibré</option>
+        <option value="Mal équilibré">Mal équilibré</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sleepQuality">😴 Qualité du sommeil (1-5)</label>
+      <input type="number" id="sleepQuality" formControlName="sleepQuality" min="1" max="5" />
+    </div>
+
+    <div class="form-group">
+      <label for="exerciseDuration">🏋️‍♂️ Durée de l'exercice physique (heures)</label>
+      <input type="number" id="exerciseDuration" formControlName="exerciseDuration" placeholder="Durée de l'exercice (en heures)" />
+    </div>
+
+    <div class="form-group">
+      <label for="negativeThoughts">☁️ Pensées négatives</label>
+      <select id="negativeThoughts" formControlName="negativeThoughts">
+        <option value="">Choisir</option>
+        <option value="Aucune">Aucune</option>
+        <option value="Quelques pensées négatives">Quelques pensées négatives</option>
+        <option value="Souvent des pensées négatives">Souvent des pensées négatives</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cognitiveFocus">🧠 Difficulté à se concentrer</label>
+      <select id="cognitiveFocus" formControlName="cognitiveFocus">
+        <option value="">Choisir</option>
+        <option value="Aucune">Aucune</option>
+        <option value="Légère">Légère</option>
+        <option value="Sévère">Sévère</option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="moodForm.invalid" class="submit-button">✨ Soumettre</button>
+  </form>
+</div>

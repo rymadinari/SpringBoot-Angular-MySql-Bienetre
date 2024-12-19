@@ -1,0 +1,36 @@
+<div class="app-container">
+<div class="temoignage-container">
+  <h2>Partagez votre expérience</h2>
+  <form [formGroup]="temoignageForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="text">Votre témoignage :</label>
+      <textarea id="text" formControlName="text" rows="4" placeholder="Écrivez votre expérience ici"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="genre">Genre :</label>
+      <select id="genre" formControlName="genre">
+        <option value="male">Homme</option>
+        <option value="female">Femme</option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="temoignageForm.invalid">Envoyer</button>
+  </form>
+
+  <h3>Témoignages récents</h3>
+  <div *ngFor="let temoignage of temoignages" class="testimonial">
+    <div class="bubble" [ngClass]="{ 'blue': temoignage.genre === 'male', 'yellow': temoignage.genre === 'female' }">
+      <div class="avatar">
+        <img [src]="temoignage.avatar" alt="avatar">
+      </div>
+      <div class="user-info">
+        <!-- Afficher le nom d'utilisateur à côté de la photo -->
+        <strong >{{ temoignage.username }}</strong>
+      </div>
+      <p>{{ temoignage.text }}</p>
+    </div>
+    <small>{{ temoignage.date }}</small>
+  </div>
+</div>
+</div>

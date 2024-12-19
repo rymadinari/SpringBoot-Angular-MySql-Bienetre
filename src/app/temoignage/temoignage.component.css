@@ -1,0 +1,122 @@
+
+.temoignage-container {
+    max-width: px;
+    margin: auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #e3f2fd, #c8e6c9); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button {
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #66bb6a, #a5d6a7);
+}
+
+h3 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: #444;
+}
+
+.testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bubble {
+    position: relative;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    max-width: 300px;
+    font-style: italic;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.bubble.blue {
+    background: linear-gradient(45deg, #42a5f5, #90caf9);
+}
+
+.bubble.yellow {
+    background: linear-gradient(45deg, #ffeb3b, #fbc02d);
+}
+
+.avatar {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial {
+    justify-content: center;
+}
+
+.testimonial .bubble {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .testimonial .bubble {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial .bubble {
+        flex: 1 1 100%;
+    }
+}

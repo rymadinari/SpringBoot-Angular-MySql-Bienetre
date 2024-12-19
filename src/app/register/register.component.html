@@ -1,0 +1,44 @@
+<div class="full-screen-container">
+  <div class="content-container">
+    <div class="image-container">
+      <img src="https://www.centre-europeen-formation.fr/wp-content/uploads/2023/09/formations-bien-etre-naturo.jpeg" alt="Bien-être image" />
+    </div>
+
+    <div class="register-box">
+      <h2>Inscription</h2>
+      <form (ngSubmit)="onRegister()">
+        <label for="nom">Nom :</label>
+        <input
+          id="nom"
+          type="text"
+          [(ngModel)]="nom"
+          name="nom"
+          required
+          placeholder="Entrez votre nom"
+        />
+
+        <label for="email">Email :</label>
+        <input
+          id="email"
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          required
+          placeholder="Entrez votre email"
+        />
+
+        <label for="password">Mot de passe :</label>
+        <input
+          id="password"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          placeholder="Entrez votre mot de passe"
+        />
+
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+</div>

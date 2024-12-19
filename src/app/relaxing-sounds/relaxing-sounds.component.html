@@ -1,0 +1,16 @@
+<div class="card shadow-lg p-4 mt-5">
+    <h2 class="text-center text-primary">Relaxing Sounds</h2>
+    <div class="text-center mt-4">
+      <p class="lead">Choose a sound to relax:</p>
+      <ul class="list-unstyled d-flex flex-column align-items-center">
+        <li *ngFor="let sound of sounds" class="mb-3 text-center">
+          <strong>{{ sound.name }}</strong>
+          <audio controls class="audio-player">
+            <source [src]="sound.url" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

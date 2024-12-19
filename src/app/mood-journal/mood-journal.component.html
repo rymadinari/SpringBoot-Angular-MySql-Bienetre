@@ -1,0 +1,56 @@
+<div class="app-container">
+<div  class="mood-journal-container">
+  <button class="home-btn" routerLink="/acceuil">Retour à l'Accueil</button>
+  <h2>Journal des Humeurs</h2>
+
+  <div *ngIf="moodEntries.length === 0">
+    <p>Aucune humeur enregistrée pour le moment.</p>
+  </div>
+
+  <table *ngIf="moodEntries.length > 0">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Humeur</th>
+        <th>Réactions émotionnelles</th>
+        <th>Niveau de stress</th>
+        <th>Interactions sociales</th>
+        <th>Équilibre alimentaire</th>
+        <th>Qualité du sommeil</th>
+        <th>Durée d'exercice</th>
+        <th>Pensées négatives</th>
+        <th>Focus cognitif</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of moodEntries">
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.mood }}</td>
+        <td>{{ entry.emotionalReactions }}</td>
+        <td>{{ entry.stressLevel }}</td>
+        <td>{{ entry.socialInteractions }}</td>
+        <td>{{ entry.foodBalance }}</td>
+        <td>{{ entry.sleepQuality }}</td>
+        <td>{{ entry.exerciseDuration }}</td>
+        <td>{{ entry.negativeThoughts }}</td>
+        <td>{{ entry.cognitiveFocus }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteMoodEntry(entry.id)">Supprimer</button>
+          <button class="analyze-btn" (click)="analyzeMood(entry)">Analyser</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="analysis-modal" *ngIf="showAnalysis">
+    <h3>Analyse de l'humeur</h3>
+    <p>{{ analysis }}</p>
+    <p><strong>Conseils :</strong></p>
+    <ul>
+      <li *ngFor="let tip of advice">{{ tip }}</li>
+    </ul>
+    <button class="close-btn" (click)="closeAnalysis()">Fermer</button>
+  </div>
+</div>
+</div>

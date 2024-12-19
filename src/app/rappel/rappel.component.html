@@ -1,0 +1,49 @@
+<div class="app-container">
+<div class="container">
+    <header>
+        <h1>Bienvenue dans Vos Rappels ⏰</h1>
+        <p>Ajoutez vos rappels et ne manquez jamais un événement important ! 🎉</p>
+    </header>
+
+    <!-- Formulaire d'ajout de rappel -->
+    <section class="form-section">
+        <form (ngSubmit)="ajouterRappel()">
+            <div class="input-group">
+                <label for="titre">Titre:</label>
+                <input type="text" id="titre" [(ngModel)]="titre" name="titre" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="description">Description:</label>
+                <textarea id="description" [(ngModel)]="description" name="description" required></textarea>
+            </div>
+    
+            <div class="input-group">
+                <label for="dateRappel">Date de Rappel:</label>
+                <input type="date" id="dateRappel" [(ngModel)]="dateRappel" name="dateRappel" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="heureRappel">Heure de Rappel:</label>
+                <input type="time" id="heureRappel" [(ngModel)]="heureRappel" name="heureRappel" required>
+            </div>
+    
+            <button type="submit">Ajouter</button>
+        </form>
+    </section>
+
+    <!-- Affichage des rappels -->
+    <section class="rappels-section">
+        <h3>Rappels d'Aujourd'hui</h3>
+        <div *ngFor="let rappel of rappelsToday">
+            <div [ngClass]="{'termine': rappel.termine}" class="rappel-card">
+                <h3>{{ rappel.titre }}</h3>
+                <p>{{ rappel.description }}</p>
+                <p>Date: {{ rappel.dateRappel }} - Heure: {{ rappel.heureRappel }}</p>
+                <button *ngIf="!rappel.termine" (click)="terminerRappel(rappel.id)">Marquer comme terminé</button>
+                <span *ngIf="rappel.termine" class="termine-text">Terminé</span>
+            </div>
+        </div>
+    </section>
+</div>
+</div>

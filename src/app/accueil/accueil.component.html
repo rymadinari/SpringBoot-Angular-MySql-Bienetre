@@ -1,0 +1,56 @@
+<div class="home-container">
+
+  <div class="home-container">
+    <nav class="navbar">
+      <ul>
+        <li>
+          <button (click)="onLogout()" class="logout-btn">
+            <img 
+              src="https://cdn-icons-png.flaticon.com/512/25/25376.png" 
+              alt="Déconnexion" 
+              class="logout-icon"
+            />
+            Déconnexion
+          </button>
+        </li>
+      </ul>
+    </nav>
+    
+
+    <header class="home-header">
+      <h1>Bienvenue , {{ userName }} ! sur <span class="brand-name">Bien-Être+ </span></h1>
+      <p>Votre partenaire quotidien pour un meilleur équilibre mental et émotionnel.</p>
+    </header>
+  
+    <section class="features-section">
+      <h2>Découvrez les fonctionnalités clés :</h2>
+      <div class="features">
+        <div class="feature-card" routerLink="/mood-formulaire">
+          <img src="https://cdn-icons-png.flaticon.com/256/6581/6581562.png" alt="Suivi de l'humeur">
+          <h3>Suivi de l'humeur</h3>
+          <p>Enregistrez vos émotions et suivez leur évolution.</p>
+        </div>
+        <div class="feature-card" routerLink="/mood-journal">
+          <img src="https://cdn-icons-png.flaticon.com/512/272/272471.png" alt="Analyse des données">
+          <h3>Analyse personnalisée</h3>
+          <p>Obtenez des graphiques et des suggestions basées sur vos données.</p>
+        </div>
+        <div class="feature-card" routerLink="/temoignage">
+          <img src="https://cdn-icons-png.flaticon.com/512/13415/13415530.png" alt="Communauté">
+          <h3>Communauté</h3>
+          <p>Partagez anonymement vos expériences avec d'autres utilisateurs.</p>
+        </div>
+        <div class="feature-card" routerLink="/wellness">
+          <img src="https://cdn-icons-png.flaticon.com/256/3590/3590425.png" alt="Commencer par petits pas">
+          <h3>Commencer par de petits pas</h3>
+          <p>Progressez doucement vers un bien-être optimal avec des actions simples.</p>
+        </div>
+        <div class="feature-card" routerLink="/rappel">
+          <img src="https://cdni.iconscout.com/illustration/premium/thumb/fille-set-rappel-dalarme-sur-telephone-mobile-11903305-9723992.png" alt="Commencer par petits pas">
+          <h3>Besoin d'un Rappel ?</h3>
+          <p>Vous pouvez consulter les informations de rappel à tout moment.</p>
+        </div>
+      </div>
+    </section>  
+  </div>
+  

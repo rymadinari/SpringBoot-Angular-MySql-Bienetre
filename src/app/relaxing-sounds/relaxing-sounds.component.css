@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    background: transparent !important;
+  }
+  
+  .card {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none;
+  }
+  
+  .text-center {
+    color: var(--primary-color, #333); /* Ajustez selon votre thème */
+  }
+  

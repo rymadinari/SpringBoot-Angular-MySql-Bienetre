@@ -1,0 +1,95 @@
+<div class="app-container">
+    <h1>Commencer par de petits pas</h1>
+    <div class="grid">
+      <div class="card" (click)="navigateTo('exercise')">
+        <img src="https://media.istockphoto.com/id/1139929498/fr/vectoriel/femme-heureuse-exer%C3%A7ant-dans-le-parc-illustration-vectorielle-dans-le-style-plat.jpg?s=612x612&w=0&k=20&c=cJGVxWFakM6GS_QNEpJyS9UC45XmaRH1dI8uigGTLT8=" alt="Faire de l'exercice">
+        <div class="card-title">Faire de l'exercice</div>
+      </div>
+      <div class="card" (click)="navigateTo('focus')">
+        <img src="https://img.freepik.com/vecteurs-libre/homme-affaires-illustre-meditant_52683-60664.jpg?w=360" alt="Travailler en profondeur">
+        <div class="card-title">Travailler en profondeur</div>
+      </div>
+      <div class="card" (click)="navigateTo('meditation')">
+        <img src="https://img.freepik.com/vecteurs-libre/concept-meditation-femme_23-2148518865.jpg" alt="Méditer">
+        <div class="card-title">Méditer</div>
+      </div>
+      
+      <div class="card" (click)="navigateTo('yoga')">
+        <img src="https://cdn.pixabay.com/photo/2024/01/20/09/39/ai-generated-8520699_1280.png" alt="Yoga">
+        <div class="card-title">Yoga</div>
+      </div>
+      
+    </div>
+
+     <div class="details-section" *ngIf="currentSection">
+        <h2>{{ currentSection.title }}</h2>
+        <p>{{ currentSection.content }}</p>
+        <img *ngIf="currentSection.imageUrl" 
+        [src]="currentSection.imageUrl" 
+        alt="Exercice physique"
+        style="width: 100%; max-width: 500px; height: auto; margin-top: 20px;"/>
+    
+        <div *ngIf="currentSection.externalLink">
+            <h3>Pour en savoir plus, visitez :</h3>
+            <a [href]="currentSection.externalLink" target="_blank">Voir le site</a>
+        </div>
+    
+        <div *ngIf="currentSection?.showTimer">
+            <p class="timer-display">Chronomètre : {{ formatTime(timer) }}</p>
+            <div class="timer-controls">
+              <button (click)="toggleTimer()">
+                {{ isTimerRunning ? 'Arrêter' : 'Démarrer' }} le chronomètre
+              </button>
+              <button (click)="resetTimer()">Réinitialiser</button>
+            </div>
+          </div>
+
+          
+          <div *ngIf="currentSection.title === 'Travailler en profondeur'">
+            <app-relaxing-sounds></app-relaxing-sounds>
+          </div>
+          
+          
+            
+            
+            
+          <div *ngIf="currentSection.meditationSteps && currentSection.meditationSteps.length > 0">
+            <div class="meditation-header">
+            </div>
+            <div class="meditation-steps">
+              <h3>Étapes de méditation :</h3>
+              <div *ngFor="let step of currentSection.meditationSteps" class="meditation-step">
+                <h4>{{ step.title }}</h4>
+                <p>{{ step.description }}</p>
+              </div>
+            </div>
+          </div>
+            
+            
+            
+            
+            
+            
+            <div *ngIf="currentSection.steps">
+              <h3>Étapes de la séance de Yoga</h3>
+              <div *ngFor="let step of currentSection.steps" class="yoga-step">
+                <h4>{{ step.title }}</h4>
+                <p>{{ step.description }}</p>
+                <img [src]="step.imageUrl" alt="{{ step.title }}" style="width: 100%; max-width: 400px; margin-top: 10px;" />
+              </div>
+          </div>
+
+          
+          
+     </div>
+</div>
+            
+           
+   
+    
+     
+     
+   
+
+    
+  
